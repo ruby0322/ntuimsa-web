@@ -1,14 +1,25 @@
 import { Stack, Box, Paper } from '@mui/material';
 import { useEffect, useState } from 'react';
 import ProfessorCard from '../components/ProfessorCard';
-import axios from '../api/professor';
+// import axios from '../api/professor';
+import axios from 'axios';
+
+const API_ROOT =
+  process.env.NODE_ENV === "production"
+    ? "/api"
+    : "http://localhost:4000/api";
+
+const instance = axios.create({
+  baseURL: API_ROOT,
+  port: 4000
+});
 
 const ProfessorList = (props) => {
     const [professors, setProfessors] = useState([]);
     useEffect(() => {
         (async () => {
-            const { data: res } = await axios.get();
-            setProfessors(res.professors);
+          const { data: res } = await instance.get('/professor');
+          setProfessors(res.professors);
         })()
     }, []);
 	return (
