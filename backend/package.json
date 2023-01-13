@@ -18,6 +18,7 @@
     "@babel/preset-env": "^7.19.4"
   },
   "scripts": {
-    "server": "nodemon src/server.js --ext js --watch src --exec babel-node"
+    "server": "nodemon src/server.js --ext js --watch src --exec babel-node",
+    "deploy": "NODE_ENV=production babel-node src/server.js"
   }
 }
