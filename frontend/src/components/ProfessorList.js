@@ -6,12 +6,11 @@ import axios from 'axios';
 
 const API_ROOT =
   process.env.NODE_ENV === "production"
-    ? "/api"
+    ? "https://ntuimsa-production.up.railway.app/api"
     : "http://localhost:4000/api";
 
 const instance = axios.create({
   baseURL: API_ROOT,
-  port: 4000
 });
 
 const ProfessorList = (props) => {
