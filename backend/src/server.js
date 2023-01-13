@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import db from './db.js';
 import apiRouter from './routes/index.js';
+import path from 'path';
 
 db.connect();
 
