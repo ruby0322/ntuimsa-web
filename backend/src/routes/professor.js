@@ -4,6 +4,8 @@ import Professor from '../models/Professor.js';
 const router = express.Router();
 
 router.get('/', async (req, res) => {
+    // const newProfessor = new Professor();
+    // await newProfessor.save();
     console.log(`Receieved GET Request:\n${req}`);
     console.log(req.query);
     const professors = await Professor.find({});

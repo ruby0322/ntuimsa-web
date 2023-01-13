@@ -32,20 +32,6 @@ const ProfessorList = (props) => {
             )
           )
         }
-        {
-          professors.map(
-            (post, idx) => (
-              <ProfessorCard key={`post-${idx}`} {...post} />
-            )
-          )
-        }
-        {
-          professors.map(
-            (post, idx) => (
-              <ProfessorCard key={`post-${idx}`} {...post} />
-            )
-          )
-        }
       </Stack>
     </Paper>
   );

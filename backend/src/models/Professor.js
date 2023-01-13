@@ -15,6 +15,12 @@ const ProfessorSchema = new mongoose.Schema({
     },
     domains: {
         type: Array
+    },
+    'research room': {
+        type: String
+    },
+    email: {
+        type: String
     }
 });
 

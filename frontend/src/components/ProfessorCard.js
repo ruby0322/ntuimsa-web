@@ -52,7 +52,7 @@ const ProfessorCard = ({ name, title, imgUrl, domains, interviews }) => {
       >
       <Avatar alt="Remy Sharp" src={imgUrl} sx={{width: 80, height: 80,}} />
       <Box sx={MiddleSX}> 
-        <Typography sx={{fontWeight: 'bold', whiteSpace: 'nowrap'}} variant='h5' component='div'>
+        <Typography sx={{fontWeight: 'bold', whiteSpace: 'nowrap'}} variant='h6' component='div'>
           {name} {title}
         </Typography>
         <Box
