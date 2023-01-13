@@ -1,5 +1,10 @@
 {
   "dependencies": {
     "dotenv": "^16.0.3"
+  },
+  "scripts": {
+    "start": "cd frontend && yarn start",
+    "server": "cd backend && yarn server",
+    "install:all": "cd frontend && yarn install && cd ../backend && yarn install"
   }
 }
